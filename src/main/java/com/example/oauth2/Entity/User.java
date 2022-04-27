@@ -24,6 +24,7 @@ public class User {
     private String username;
     private String password;
     private boolean enabled;
+    private String tokenEmail;
 
     @ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private Set<Role> roles;
@@ -31,4 +32,11 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Provider provider;
 
+    public User(String username, String password, boolean enabled, Set<Role> roles) {
+        this.username = username;
+        this.password = password;
+        this.enabled = enabled;
+        this.roles = roles;
+        this.provider= null;
+    }
 }
