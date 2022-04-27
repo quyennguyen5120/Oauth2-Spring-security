@@ -66,4 +66,10 @@ public class Controllerrrrrrrrr {
     public String zxczxcz403(){
         return "403";
     }
+
+    @GetMapping("/forgot-password")
+    public String forgotPassword(){
+        String mail ="";
+        return "";
+    }
 }
